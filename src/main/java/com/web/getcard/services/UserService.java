@@ -50,7 +50,7 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         User savedUser = userRepository.save(user);
 
-        // Associar o cartão ao novo usuário
+
         card.setUser(savedUser);
         card.setActive(true);
         cardRepository.save(card);
