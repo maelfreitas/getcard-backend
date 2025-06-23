@@ -38,13 +38,14 @@ public class AuthController {
 
     @PostMapping("/register")
     public User register(@RequestBody UserRegistrationRequest request) {
-        return userService.createUser(request.getUser(), request.getCardCode());
+        return userService.createUser(request.getUser(), request.getCardCode(), request.getValCode());
     }
 
     @Data
     public static class UserRegistrationRequest {
         private User user;
         private String cardCode;
+        private String valCode;
     }
 
     @PostMapping("/login")

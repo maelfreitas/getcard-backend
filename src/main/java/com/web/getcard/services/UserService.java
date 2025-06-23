@@ -31,7 +31,7 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public User createUser(User user, String cardCode) {
+    public User createUser(User user, String cardCode, String valCode) {
         Optional<Card> cardOpt = cardRepository.findByCode(cardCode);
         Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
 
@@ -42,6 +42,10 @@ public class UserService {
         Card card = cardOpt.get();
         if (card.getUser() != null) {
             throw new RuntimeException("Card already associated with another user.");
+        }
+
+        if (!card.getValCode().equals(valCode)) {
+            throw new RuntimeException("Código de validação do card incorreto.");
         }
 
         if (existingUser.isPresent()) {

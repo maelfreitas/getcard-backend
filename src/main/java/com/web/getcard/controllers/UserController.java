@@ -29,7 +29,7 @@ public class UserController {
     }
     @PostMapping("/register")
     public User registerUser(@RequestBody UserRegistrationRequest request) {
-        return userService.createUser(request.getUser(), request.getCardCode());
+        return userService.createUser(request.getUser(), request.getCardCode(), request.getValCode());
     }
 
 
@@ -37,6 +37,7 @@ public class UserController {
     public static class UserRegistrationRequest {
         private User user;
         private String cardCode;
+        private String valCode;
 
     }
 

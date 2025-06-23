@@ -18,6 +18,7 @@ public class Card {
     @Column(unique = true)
     private String code; // Pode ser o QR Code ou identificação NFC
 
+    private String valCode;
     private boolean active = false;
 
     @OneToOne
