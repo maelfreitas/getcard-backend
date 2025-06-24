@@ -38,7 +38,15 @@ public class ProfileService {
         profile.setBio(profileData.getBio());
         profile.setPhone(profileData.getPhone());
         profile.setProfileImageUrl(profileData.getProfileImageUrl());
-        profile.setSocialLinks(profileData.getSocialLinks());
+        profile.setInstagram(profileData.getInstagram());
+        if (!profile.getInstagram().startsWith("http")) {
+            profile.setInstagram("https://" + profileData.getInstagram());
+        }
+        profile.setLinkedin(profileData.getLinkedin());
+        if (!profile.getLinkedin().startsWith("http")) {
+            profile.setLinkedin("https://" + profileData.getLinkedin());
+        }
+
 
         return profileRepository.save(profile);
     }
@@ -72,7 +80,14 @@ public class ProfileService {
         profile.setBio(updatedProfile.getBio());
         profile.setPhone(updatedProfile.getPhone());
         profile.setProfileImageUrl(updatedProfile.getProfileImageUrl());
-        profile.setSocialLinks(updatedProfile.getSocialLinks());
+        profile.setInstagram(updatedProfile.getInstagram());
+        if (!profile.getInstagram().startsWith("http")) {
+            profile.setInstagram("https://" + updatedProfile.getInstagram());
+        }
+        profile.setLinkedin(updatedProfile.getLinkedin());
+        if (!profile.getLinkedin().startsWith("http")) {
+            profile.setLinkedin("https://" + updatedProfile.getLinkedin());
+        }
 
         return profileRepository.save(profile);
     }

@@ -23,9 +23,8 @@ public class Profile {
     private String phone;
     private String bio;
     private String profileImageUrl;
-
-    @Column(columnDefinition = "TEXT")
-    private String socialLinks; // Pode guardar links de redes sociais como JSON ou String
+    private String instagram;
+    private String linkedin;
 
     @OneToOne
     @JoinColumn(name = "user_id")
