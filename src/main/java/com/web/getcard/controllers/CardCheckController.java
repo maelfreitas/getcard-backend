@@ -3,10 +3,7 @@ package com.web.getcard.controllers;
 import com.web.getcard.entities.Card;
 import com.web.getcard.repositories.CardRepository;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
@@ -38,6 +35,13 @@ public class CardCheckController {
                 "associated", associated,
                 "cardCode", cardCode
         );
+    }
+
+    @GetMapping("/check-valcode")
+    public boolean checkValCode(@RequestParam String code, @RequestParam String valCode) {
+        return cardRepository.findByCode(code)
+                .map(card -> valCode.equals(card.getValCode()) && card.getUser() == null)
+                .orElse(false);
     }
 }
 

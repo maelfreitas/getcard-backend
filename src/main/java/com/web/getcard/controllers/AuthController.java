@@ -5,13 +5,11 @@ import com.web.getcard.repositories.UserRepository;
 import com.web.getcard.security.JwtUtil;
 import com.web.getcard.services.UserService;
 import lombok.Data;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 import java.util.Optional;
@@ -72,6 +70,13 @@ public class AuthController {
                 "userName", user.getUsername()
         );
     }
+
+    @GetMapping("/check-email")
+    public ResponseEntity<Boolean> checkEmailExists(@RequestParam String email) {
+        boolean exists = userRepository.existsByEmail(email);
+        return ResponseEntity.ok(exists);
+    }
+
 
 }
 

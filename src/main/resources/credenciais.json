@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "geticard-464013",
+  "private_key_id": "d979ac95e8dd08032366e21c460e05c5ce308a2e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCiUoPTjdYoJYIh\nr+aCoK6hmFczpd086oM9kWt3rdw+kOhZxjaHJZdLxztt6P1EkDBPuYCREazWAuwt\nxUJpY43m/eWdEMJPiA/g40S/p4owse2ISY+KYxSqLdsdecLRVSK1ONouPOYTdgyR\nbtBUiEM4Dep8i3a5VIWSN/QjV01aLSW2xsNebhYseXznUYid4eOEvhZOwUrRLz1F\n7YuMraNiSTaSMJAQn6UJOXgmizRXTxro/Qu0nRc/aYHORb+LAXd44jvLrJr5ay/s\nw5M2gRaY/9E+Ss6rIxufxhdHYv57Bx1fmvDTToGqnHB4YlRLB25XWuFnP6yWMqCp\nxZwyGvplAgMBAAECggEAOvlUuM9e384k1d1lF8+OMtq4z+RymVewn/VOALjTfI3E\nRR2dIQPY0KjNYDTWk4r5anXAjrRHwadlLInvA4AuhZ54RlTY6/FIp5GaoDEcJW33\nmVz0gDhYQS4Q3kgnLkvKpOHHbyYkBy0MCuiiWxv4pAx2RZKb62CYeNPIaPCmg1yw\nPW/UoEXU2GMQuuKJdCttrUPncUP7fNIW5DxPy+3wM0uKarFGpScl5ComxImHo8WJ\nMr02B1XE+Jp3Y4IJS66rieITr+XVeUzkMpv9DpRPeDXNrc/xVQqEWVFxDNRIvili\noLfK1dkd6yfbto2LEL8ey4mSV5ib4ka44PFJmfBbjwKBgQDbr/VVYlhi3MCpPC/g\nZ4s1TWLP3kPckgXUDQ7jYmCFNKumdPngQMi/w7xsKgmuHw0jc7Y1tlHlENUdtZ6p\nW9wWFVQeqiH9cPj4di4O48r/A5NKZETebcs3bNF+orGiVE48kEcl/PZm3/xKx8vd\nzsj1jvUJ3UgExtj108vT/gP4YwKBgQC9JynUCZKzwVhtVe7pVQ07n8DZKKNao1Pt\nACGv6L23snsMVGpZiWh/g+wcdKmEqFR97MagRc31ZN1tKl8/MZIkDPi5uk4FXV8Z\ns/DyRI7sdX6GrEpGF0uQ4FDbV9TqIw31H7OScD90LrK3cbs7XWEy6t/G1Eb/McpX\njXBDhXwolwKBgAEgVdGqP2nCV/qGJHiyDzSmwOrv6Mkotn7v0jO4PWZxbq/byaws\nqNrS1hR34rTR0+9qmHSOCr1x6KXOWJHltqsmUNgXZzU1bxFXCcVpxZCpJAgtm2zI\ng1I1bJ2Jl/+NDxmgY7z+HwVIALMhcxogBUe9A+SZDdV4b4RTIahklQChAoGAJTtk\nPFx2B/Py1/KmSD95j1buutAI93pWtrvj5aBGV7ZGCjNDi8REUXVCMIe2JmqL1w2Y\nO0wCMl9cRnSksuerAHWdL9HAMcYjRgfpUYa1K04lTZT0Ob+0HBxLTiGHw16LDMjk\nq9p0YwYeH4W/ePv0efVJfvWh0/GVBo7Mnj3UJpkCgYAUb42qYjjePYImNFkHvszZ\n12jTkZca+YlHboQr+s/6Rn0sxIDDqJEo2QPFJvlF2v9uYADEQlQUe0CEfk70Vnfx\nQW7ElOArYyTZnNMwRtBzHncA4H77v0cwSeY3vMg2c/b4dAv2Sdi/sLb8LyG5yLy+\nD2mYxFnlTeZEdgwT6zlg/w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "geticard@geticard-464013.iam.gserviceaccount.com",
+  "client_id": "103837467903071216070",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/geticard%40geticard-464013.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
