@@ -21,6 +21,7 @@ public class Profile {
 
     private String name;
     private String phone;
+    private String email;
     private String bio;
     private String profileImageUrl;
     private String instagram;

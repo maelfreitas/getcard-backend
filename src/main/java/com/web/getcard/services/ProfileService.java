@@ -37,6 +37,7 @@ public class ProfileService {
         profile.setName(profileData.getName());
         profile.setBio(profileData.getBio());
         profile.setPhone(profileData.getPhone());
+        profile.setEmail(profileData.getEmail());
         profile.setProfileImageUrl(profileData.getProfileImageUrl());
         profile.setInstagram(profileData.getInstagram());
         if (!profile.getInstagram().startsWith("http")) {
@@ -79,6 +80,7 @@ public class ProfileService {
         profile.setName(updatedProfile.getName());
         profile.setBio(updatedProfile.getBio());
         profile.setPhone(updatedProfile.getPhone());
+        profile.setEmail(updatedProfile.getEmail());
         profile.setProfileImageUrl(updatedProfile.getProfileImageUrl());
         profile.setInstagram(updatedProfile.getInstagram());
         if (!profile.getInstagram().startsWith("http")) {
