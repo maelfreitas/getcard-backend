@@ -47,6 +47,8 @@ public class ProfileService {
         if (!profile.getLinkedin().startsWith("http")) {
             profile.setLinkedin("https://" + profileData.getLinkedin());
         }
+        profile.setTheme(profileData.getTheme());
+
 
 
         return profileRepository.save(profile);
@@ -90,6 +92,7 @@ public class ProfileService {
         if (!profile.getLinkedin().startsWith("http")) {
             profile.setLinkedin("https://" + updatedProfile.getLinkedin());
         }
+        profile.setTheme(updatedProfile.getTheme());
 
         return profileRepository.save(profile);
     }

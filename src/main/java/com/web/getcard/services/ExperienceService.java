@@ -28,8 +28,9 @@ public class ExperienceService {
     }
 
     public List<Experience> getExperiencesByProfile(int profileId) {
-        return experienceRepository.findByProfileId(profileId);
+        return experienceRepository.findByProfileIdOrderByEndYearDesc(profileId);
     }
+
 
     public void deleteExperience(int experienceId) {
         experienceRepository.deleteById(experienceId);

@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface ExperienceRepository extends JpaRepository<Experience, Integer> {
-    List<Experience> findByProfileId(int profileId);
+    List<Experience> findByProfileIdOrderByEndYearDesc(int profileId);
+
 }
