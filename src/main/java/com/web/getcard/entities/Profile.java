@@ -26,6 +26,7 @@ public class Profile {
     private String profileImageUrl;
     private String instagram;
     private String linkedin;
+    private String location;
     private String theme;
 
     @OneToOne

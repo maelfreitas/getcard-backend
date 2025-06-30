@@ -39,14 +39,25 @@ public class ProfileService {
         profile.setPhone(profileData.getPhone());
         profile.setEmail(profileData.getEmail());
         profile.setProfileImageUrl(profileData.getProfileImageUrl());
-        profile.setInstagram(profileData.getInstagram());
-        if (!profile.getInstagram().startsWith("http")) {
-            profile.setInstagram("https://" + profileData.getInstagram());
+        String instagram = profileData.getInstagram();
+        if (instagram != null && !instagram.trim().isEmpty()) {
+            if (!instagram.startsWith("http")) {
+                instagram = "https://" + instagram;
+            }
+            profile.setInstagram(instagram);
+        } else {
+            profile.setInstagram(null);
         }
-        profile.setLinkedin(profileData.getLinkedin());
-        if (!profile.getLinkedin().startsWith("http")) {
-            profile.setLinkedin("https://" + profileData.getLinkedin());
+        String linkedin = profileData.getLinkedin();
+        if (linkedin != null && !linkedin.trim().isEmpty()) {
+            if (!linkedin.startsWith("http")) {
+                linkedin = "https://" + linkedin;
+            }
+            profile.setLinkedin(linkedin);
+        } else {
+            profile.setLinkedin(null);
         }
+        profile.setLocation(profileData.getLocation());
         profile.setTheme(profileData.getTheme());
 
 
@@ -84,14 +95,26 @@ public class ProfileService {
         profile.setPhone(updatedProfile.getPhone());
         profile.setEmail(updatedProfile.getEmail());
         profile.setProfileImageUrl(updatedProfile.getProfileImageUrl());
-        profile.setInstagram(updatedProfile.getInstagram());
-        if (!profile.getInstagram().startsWith("http")) {
-            profile.setInstagram("https://" + updatedProfile.getInstagram());
+        String instagram = updatedProfile.getInstagram();
+        if (instagram != null && !instagram.trim().isEmpty()) {
+            if (!instagram.startsWith("http")) {
+                instagram = "https://" + instagram;
+            }
+            profile.setInstagram(instagram);
+        } else {
+            profile.setInstagram(null);
         }
-        profile.setLinkedin(updatedProfile.getLinkedin());
-        if (!profile.getLinkedin().startsWith("http")) {
-            profile.setLinkedin("https://" + updatedProfile.getLinkedin());
+
+        String linkedin = updatedProfile.getLinkedin();
+        if (linkedin != null && !linkedin.trim().isEmpty()) {
+            if (!linkedin.startsWith("http")) {
+                linkedin = "https://" + linkedin;
+            }
+            profile.setLinkedin(linkedin);
+        } else {
+            profile.setLinkedin(null);
         }
+        profile.setLocation(updatedProfile.getLocation());
         profile.setTheme(updatedProfile.getTheme());
 
         return profileRepository.save(profile);
