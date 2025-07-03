@@ -35,6 +35,7 @@ public class ProfileService {
         Profile profile = existingProfile.orElse(new Profile());
         profile.setUser(user);
         profile.setName(profileData.getName());
+        profile.setProfession(profileData.getProfession());
         profile.setBio(profileData.getBio());
         profile.setPhone(profileData.getPhone());
         profile.setEmail(profileData.getEmail());
@@ -91,6 +92,7 @@ public class ProfileService {
                 .orElseThrow(() -> new RuntimeException("Perfil não encontrado"));
 
         profile.setName(updatedProfile.getName());
+        profile.setProfession(updatedProfile.getProfession());
         profile.setBio(updatedProfile.getBio());
         profile.setPhone(updatedProfile.getPhone());
         profile.setEmail(updatedProfile.getEmail());

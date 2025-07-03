@@ -20,6 +20,7 @@ public class Profile {
     private int id;
 
     private String name;
+    private String profession;
     private String phone;
     private String email;
     private String bio;
