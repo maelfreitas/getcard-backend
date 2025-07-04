@@ -11,18 +11,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "tb_experiences")
-public class Experience {
+@Table(name = "tb_services")
+public class Service {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String title;
-    private String workplace;
-    private String location;
-    private int startYear;
-    private int endYear;
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "profile_id")
