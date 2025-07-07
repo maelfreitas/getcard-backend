@@ -16,7 +16,7 @@ public class Card {
     private int id;
 
     @Column(unique = true)
-    private String code; // Pode ser o QR Code ou identificação NFC
+    private String code;
 
     private String valCode;
     private boolean active = false;

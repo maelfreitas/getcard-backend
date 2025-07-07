@@ -18,8 +18,8 @@ public class Product {
     private int id;
     private String name;
     private String description;
-    private int img;
-    private int link;
+    private String img;
+    private String link;
 
     @ManyToOne
     @JoinColumn(name = "profile_id")
