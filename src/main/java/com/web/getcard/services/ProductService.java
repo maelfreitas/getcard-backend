@@ -7,6 +7,7 @@ import com.web.getcard.repositories.ProfileRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -30,6 +31,25 @@ public class ProductService {
     public List<Product> getProductsByProfile(int profileId) {
         return productRepository.findByProfileId(profileId);
     }
+
+    public Product getProductById(int productId) {
+        return productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+    }
+
+    // Atualizar produto
+    public Product updateProduct(int productId, Product updatedProduct) {
+        Product existing = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("Produto não encontrado"));
+
+        existing.setName(updatedProduct.getName());
+        existing.setDescription(updatedProduct.getDescription());
+        existing.setImg(updatedProduct.getImg());
+        existing.setLink(updatedProduct.getLink());
+
+        return productRepository.save(existing);
+    }
+
 
 
     public void deleteProduct(int productId) {
