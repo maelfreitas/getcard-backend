@@ -34,6 +34,8 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/check/**").permitAll()
                         .requestMatchers("/api/profile/public/**").permitAll()
+                        .requestMatchers("/api/product/list/**").permitAll()
+                        .requestMatchers("/api/service/list/**").permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class); // Adiciona o filtro JWT
